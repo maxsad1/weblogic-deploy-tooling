@@ -19,7 +19,9 @@
                     "folders": {},
                     "attributes": {
                         "BufferSizeKb":         [ {"version": "[12.2.1,)",           "wlst_mode": "both", "wlst_name": "BufferSizeK${b:B}",    "wlst_path": "WP001", "value": {"default": 8                                      }, "wlst_type": "integer" } ],
-                        "DateFormatPattern":    [ {"version": "[12.2.1,)",           "wlst_mode": "both", "wlst_name": "DateFormatPattern",    "wlst_path": "WP001", "value": {"default": "${None:MMM d, yyyy h:mm:ss a z}"      }, "wlst_type": "string"  } ],
+                        "DateFormatPattern":    [ {"version": "[12.2.1,12.2.1.1)",   "wlst_mode": "both", "wlst_name": "DateFormatPattern",    "wlst_path": "WP001", "value": {"default": "${None:MMM d, yyyy h:mm:ss a z}"      }, "wlst_type": "string"  } ,
+                                                  {"version": "[12.2.1.1,12.2.1.3)", "wlst_mode": "both", "wlst_name": "DateFormatPattern",    "wlst_path": "WP001", "value": {"default": "${None:MMM d, yyyy, h:mm:ss,S a z}"   }, "wlst_type": "string"  } ,
+                                                  {"version": "[12.2.1.3,)",         "wlst_mode": "both", "wlst_name": "DateFormatPattern",    "wlst_path": "WP001", "value": {"default": "${None:MMM d, yyyy h:mm:ss,SSS a z}"  }, "wlst_type": "string"  } ],
                         "ELFFields":            [ {"version": "[12.2.1,)",           "wlst_mode": "both", "wlst_name": "ELFFields",            "wlst_path": "WP001", "value": {"default": "date time cs-method cs-uri sc-status" }, "wlst_type": "string"  } ],
                         "FileCount":            [ {"version": "[12.2.1,12.2.1.3)",   "wlst_mode": "both", "wlst_name": "FileCount",            "wlst_path": "WP001", "value": {"default": 7                                      }, "wlst_type": "integer" } ,
                                                   {"version": "[12.2.1.3,)",         "wlst_mode": "both", "wlst_name": "FileCount",            "wlst_path": "WP001", "value": {"default": "${7:100}"                             }, "wlst_type": "integer" } ],

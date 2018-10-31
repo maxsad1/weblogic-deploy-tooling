@@ -209,7 +209,7 @@
                         "Enabled":           [ {"version": "[12.1.2,)",     "wlst_mode": "both",    "wlst_name": "Enabled",       "wlst_path": "WP001", "value": {"default": "${None:true}"                                                                               }, "wlst_type": "boolean"} ],
                         "LoggerName":        [ {"version": "[12.1.2,)",     "wlst_mode": "both",    "wlst_name": "LoggerName",    "wlst_path": "WP001", "value": {"default": "${None:com.oracle.coherence}"                                                               }, "wlst_type": "string" } ],
                         "MessageFormat":     [ {"version": "[12.1.2,)",     "wlst_mode": "offline", "wlst_name": "MessageFormat", "wlst_path": "WP001", "value": {"default": "None"                                                                                       }, "wlst_type": "string", "get_method": "LSA" },
-                                               {"version": "[12.1.2,)",     "wlst_mode": "online",  "wlst_name": "MessageFormat", "wlst_path": "WP001", "value": {"default": "{date}/{uptime} {product} {version} &lt;{level}> (thread={thread}, member={member}): {text}"}, "wlst_type": "string", "get_method": "GET" } ]
+                                               {"version": "[12.1.2,)",     "wlst_mode": "online",  "wlst_name": "MessageFormat", "wlst_path": "WP001", "value": {"default": "{date}/{uptime} {product} {version} <{level}> (thread={thread}, member={member}): {text}"}, "wlst_type": "string", "get_method": "GET" } ]
                     },
                     "wlst_attributes_path": "WP001",
                     "wlst_paths": {
