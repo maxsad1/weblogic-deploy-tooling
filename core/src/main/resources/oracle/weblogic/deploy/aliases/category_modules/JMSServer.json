@@ -45,7 +45,7 @@
             "folders": {},
             "attributes": {
                 "BufferSizeKb":                    [ {"version": "[10,)",              "wlst_mode": "both",    "wlst_name": "BufferSize${Kb:KB}",    "wlst_path": "WP001", "value": {"default": 8                                    }, "wlst_type": "integer", "get_method": "LSA"} ],
-                "DateFormatPattern":               [ {"version": "[10,)",              "wlst_mode": "offline", "wlst_name": "DateFormatPattern",     "wlst_path": "WP001", "value": {"default": "NONE"                               }, "wlst_type": "string",  "get_method": "LSA" } ,
+                "DateFormatPattern":               [ {"version": "[10,)",              "wlst_mode": "offline", "wlst_name": "DateFormatPattern",     "wlst_path": "WP001", "value": {"default": "None"                               }, "wlst_type": "string",  "get_method": "LSA" } ,
                                                      {"version": "[10,12.2.1)",        "wlst_mode": "online",  "wlst_name": "DateFormatPattern",     "wlst_path": "WP001", "value": {"default": "MMM d, yyyy h:mm:ss a z"            }, "wlst_type": "string",  "get_method": "GET", "restart_required": "true" } ,
                                                      {"version": "[12.2.1,12.2.1.1)",  "wlst_mode": "online",  "wlst_name": "DateFormatPattern",     "wlst_path": "WP001", "value": {"default": "MMM d, yyyy h:mm:ss a z"            }, "wlst_type": "string"   } ,
                                                      {"version": "[12.2.1.1,12.2.1.3)","wlst_mode": "online",  "wlst_name": "DateFormatPattern",     "wlst_path": "WP001", "value": {"default": "MMM d, yyyy, h:mm:ss,S a z"         }, "wlst_type": "string"   } ,

@@ -40,7 +40,7 @@ ENV ADMIN_HOST="wlsadmin" \
     NM_PORT="5556" \
     MS_PORT="8001" \
     DEBUG_PORT="8453" \
-    ORACLE_HOME=/u01/oracle \
+    ORACLE_HOME=${/u01/oracle \
     SCRIPT_FILE=/u01/oracle/createAndStartWLSDomain.sh \
     CONFIG_JVM_ARGS="-Dweblogic.security.SSL.ignoreHostnameVerification=true"  \
     PATH=$PATH:/u01/oracle/oracle_common/common/bin:/u01/oracle/wlserver/common/bin:/u01/oracle/user_projects/domains/${DOMAIN_NAME:-base_domain}/bin:/u01/oracle
@@ -48,7 +48,7 @@ ENV ADMIN_HOST="wlsadmin" \
 # Domain and Server environment variables
 # ------------------------------------------------------------
 ENV DOMAIN_NAME="${DOMAIN_NAME:-base_domain}" \
-    PRE_DOMAIN_HOME=/u01/oracle/user_projects \
+    PRE_DOMAIN_HOME=/shared/domain \
     ADMIN_PORT="${ADMIN_PORT:-7001}" \
     WDT_MODEL="$WDT_MODEL" \
     WDT_ARCHIVE="$WDT_ARCHIVE"

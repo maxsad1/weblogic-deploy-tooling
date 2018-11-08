@@ -31,7 +31,7 @@ if [ -z "$PASS" ]; then
 fi
 
 #Define DOMAIN_HOME
-export DOMAIN_HOME=/u01/oracle/user_projects/domains/$DOMAIN_NAME
+export DOMAIN_HOME=/$DOMAIN_NAME
 
 mkdir -p ${DOMAIN_HOME}/servers/AdminServer/security/
 echo "username=${USER}" >> $DOMAIN_HOME/servers/AdminServer/security/boot.properties
