@@ -1008,39 +1008,6 @@ class Aliases(object):
         """
         return self._alias_entries.get_domain_info_attribute_names_and_types()
 
-    def attribute_values_are_equal(self, location, model_attribute_name, model_attribute_value, wlst_attribute_value):
-        """
-        Returns whether or not the model and WLST values for a given model attribute,
-        should be considered equal.
-
-        :param location:
-        :param model_attribute_name:
-        :param model_attribute_value:
-        :param wlst_attribute_value:
-        :return: boolean
-        :raises: AliasException: if an error occurs
-        """
-
-        _method_name = 'attribute_values_are_equal'
-
-        result = False
-
-        module_folder = self._alias_entries.get_dictionary_for_location(location)
-
-        if ATTRIBUTES not in module_folder:
-            ex = exception_helper.create_alias_exception('WLSDPLY-08400', location.get_folder_path())
-            self._logger.throwing(ex, class_name=self._class_name, method_name=_method_name)
-            raise ex
-
-        for key, value in module_folder[ATTRIBUTES].iteritems():
-            if key == model_attribute_name:
-                attribute_info = module_folder[ATTRIBUTES][key]
-                if attribute_info and VALUE in attribute_info and DEFAULT in attribute_info[VALUE]:
-                    result = (model_attribute_value == wlst_attribute_value and
-                              model_attribute_value == attribute_info[VALUE][DEFAULT])
-
-        return result
-
     def is_valid_model_attribute_name(self, location, model_attribute_name):
         """
         Return whether or not location's model folders list has an attribute
@@ -1129,6 +1096,20 @@ class Aliases(object):
         :return: list of ignored attribute
         """
         return self._alias_entries.IGNORE_FOR_MODEL_LIST
+
+    def get_preferred_model_type(self, location, model_attribute_name):
+        """
+        Return the preferred model type, if present, for the alias attribute
+        :return: alias attributed preferred model type or None if not present or attribute not found
+        """
+        _method_name = ''
+        result = None
+        self._logger.entering(str(location), model_attribute_name, class_name=self._class_name, method_name=_method_name)
+        attribute_info = self._alias_entries.get_alias_attribute_entry_by_model_name(location, model_attribute_name)
+        if attribute_info is not None and PREFERRED_MODEL_TYPE in attribute_info:
+            result = attribute_info[PREFERRED_MODEL_TYPE]
+        self._logger.exiting(class_name=self._class_name, method_name=_method_name, result=result)
+        return result
 
     def decrypt_password(self, text):
         """

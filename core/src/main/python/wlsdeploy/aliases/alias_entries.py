@@ -717,7 +717,8 @@ class AliasEntries(object):
         _logger.entering(str(location), model_attribute_name, class_name=_class_name, method_name=_method_name)
         folder_dict = self.__get_dictionary_for_location(location, False)
         if folder_dict is not None and ATTRIBUTES in folder_dict:
-            if model_attribute_name in folder_dict[ATTRIBUTES]:
+            attribute_info = folder_dict[ATTRIBUTES]
+            if attribute_info is not None and model_attribute_name in attribute_info:
                 model_attr_dict = copy.deepcopy(folder_dict[ATTRIBUTES][model_attribute_name])
                 if WLST_PATH in model_attr_dict:
                     del model_attr_dict[WLST_PATH]
