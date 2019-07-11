@@ -2,8 +2,8 @@
 # *****************************************************************************
 # validateModel.sh
 #
-# Copyright (c) 2017, 2018, Oracle and/or its affiliates. All rights reserved.
-# The Universal Permissive License (UPL), Version 1.0
+# Copyright (c) 2017, 2019, Oracle and/or its affiliates. All rights reserved.
+# Licensed under the Universal Permissive License v 1.0 as shown at http://oss.oracle.com/licenses/upl.
 #
 #     NAME
 #       validateModel.sh - WLS Deploy tool to validate artifacts and print usage
@@ -69,9 +69,10 @@ usage() {
   echo "                          control switches are mutually exclusive."
   echo ""
   echo "        model_file      - the location of the model file to use if not using"
-  echo "                          the -print_usage functionality.  If not specified,"
-  echo "                          the tool will look for the model in the archive."
-  echo "                          If the model is not found, validation will only"
+  echo "                          the -print_usage functionality.  This can also be specified as a"
+  echo "                          comma-separated list of model locations, where each successive model layers"
+  echo "                          on top of the previous ones.  If not specified, the tool will look for the"
+  echo "                          model in the archive.  If the model is not found, validation will only"
   echo "                          validate the artifacts provided."
   echo ""
   echo "        variable_file   - the location of the property file containing"

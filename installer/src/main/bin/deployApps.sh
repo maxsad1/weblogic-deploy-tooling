@@ -3,7 +3,7 @@
 # deployApps.sh
 #
 # Copyright (c) 2017, 2019, Oracle and/or its affiliates. All rights reserved.
-# The Universal Permissive License (UPL), Version 1.0
+# Licensed under the Universal Permissive License v 1.0 as shown at http://oss.oracle.com/licenses/upl.
 #
 #     NAME
 #       deployApps.sh - WLS Deploy tool to provision apps and resources.
@@ -68,8 +68,9 @@ usage() {
   echo ""
   echo "        archive_file    - the path to the archive file to use"
   echo ""
-  echo "        model_file      - the location of the model file to use,"
-  echo "                          the default is to get the model from the archive"
+  echo "        model_file      - the location of the model file to use.  This can also be specified as a"
+  echo "                          comma-separated list of model locations, where each successive model layers"
+  echo "                          on top of the previous ones."
   echo ""
   echo "        variable_file   - the location of the property file containing"
   echo "                          the variable values for all variables used in"

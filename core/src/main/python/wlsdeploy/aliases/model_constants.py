@@ -1,6 +1,6 @@
 """
 Copyright (c) 2017, 2019, Oracle and/or its affiliates. All rights reserved.
-The Universal Permissive License (UPL), Version 1.0
+Licensed under the Universal Permissive License v 1.0 as shown at http://oss.oracle.com/licenses/upl.
 """
 
 # lists may be represented in the model as comma-separated strings
@@ -19,6 +19,7 @@ APP_DEPLOYMENTS = 'appDeployments'
 APP_DIR = 'AppDir'
 APPLICATION = 'Application'
 RCU_DB_INFO = 'RCUDbInfo'
+OPSS_SECRETS = 'OPSSSecrets'
 RCU_PREFIX = 'rcu_prefix'
 RCU_SCHEMA_PASSWORD = 'rcu_schema_password'
 RCU_ADMIN_PASSWORD = 'rcu_admin_password'

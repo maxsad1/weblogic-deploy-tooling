@@ -3,7 +3,7 @@
 # createDomain.sh
 #
 # Copyright (c) 2017, 2019, Oracle and/or its affiliates. All rights reserved.
-# The Universal Permissive License (UPL), Version 1.0
+# Licensed under the Universal Permissive License v 1.0 as shown at http://oss.oracle.com/licenses/upl.
 #
 #     NAME
 #       createDomain.sh - WLS Deploy tool to create empty domains.
@@ -87,7 +87,9 @@ usage() {
   echo "                          argument is not specified, the model file in this archive"
   echo "                          will be used."
   echo ""
-  echo "        model_file      - the location of the model file to use."
+  echo "        model_file      - the location of the model file to use.  This can also be specified as a"
+  echo "                          comma-separated list of model locations, where each successive model layers on top"
+  echo "                          of the previous ones."
   echo ""
   echo "        variable_file   - the location of the property file containing"
   echo "                          the variable values for all variables used in"
