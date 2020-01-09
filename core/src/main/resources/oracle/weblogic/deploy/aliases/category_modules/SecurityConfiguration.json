@@ -1185,7 +1185,7 @@
                         "LockoutCacheSize":        [ {"version": "[10,)", "wlst_mode": "both",    "wlst_name": "LockoutCacheSize",        "wlst_path": "WP001", "value": {"default": 5      },    "wlst_type": "long"    } ],
                         "LockoutDuration":         [ {"version": "[10,)", "wlst_mode": "both",    "wlst_name": "LockoutDuration",         "wlst_path": "WP001", "value": {"default": 30     },    "wlst_type": "long"    } ],
                         "LockoutEnabled":          [ {"version": "[10,)", "wlst_mode": "both",    "wlst_name": "LockoutEnabled",          "wlst_path": "WP001", "value": {"default": "true" },    "wlst_type": "boolean" } ],
-                        "LockoutGcThreshold":      [ {"version": "[10,)", "wlst_mode": "both",    "wlst_name": "LockoutGcThreshold",      "wlst_path": "WP001", "value": {"default": 400    },    "wlst_type": "long"    } ],
+                        "LockoutGcThreshold":      [ {"version": "[10,)", "wlst_mode": "both",    "wlst_name": "Lockout${Gc:GC}Threshold", "wlst_path": "WP001", "value": {"default": 400   },    "wlst_type": "long"    } ],
                         "LockoutResetDuration":    [ {"version": "[10,)", "wlst_mode": "both",    "wlst_name": "LockoutResetDuration",    "wlst_path": "WP001", "value": {"default": 5      },    "wlst_type": "long"    } ],
                         "LockoutThreshold":        [ {"version": "[10,)", "wlst_mode": "both",    "wlst_name": "LockoutThreshold",        "wlst_path": "WP001", "value": {"default": 5      },    "wlst_type": "long"    } ]
                     },
@@ -1213,9 +1213,9 @@
                 "ManagementIdentityDomain":                 [ {"version": "[12.2.1.2,)", "wlst_mode": "both", "wlst_name": "ManagementIdentityDomain",                 "wlst_path": "WP001", "value": {"default": "None"                     }, "wlst_type": "string"  } ],
                 "MaxWebLogicPrincipalsInCache":             [ {"version": "[10,)",       "wlst_mode": "both", "wlst_name": "MaxWebLogicPrincipalsInCache",             "wlst_path": "WP001", "value": {"default": 0                          }, "wlst_type": "integer" } ],
                 "RetireTimeoutSeconds":                     [ {"version": "[12.2.1,)",   "wlst_mode": "both", "wlst_name": "RetireTimeoutSeconds",                     "wlst_path": "WP001", "value": {"default": 60                         }, "wlst_type": "integer" } ],
-                "SecurityDDModel":                          [ {"version": "[10,12.1.3)", "wlst_mode": "both", "wlst_name": "SecurityDdModel",                          "wlst_path": "WP001", "value": {"default": "None"                     }, "wlst_type": "string"  }  ,
-                                                              {"version": "[12.1.3,)",   "wlst_mode": "both", "wlst_name": "SecurityDDModel",                          "wlst_path": "WP001", "value": {"default": "None"                     }, "wlst_type": "string"  } ],
-                "ValidateDDSecurityData":                   [ {"version": "[10,12.1.3)", "wlst_mode": "both", "wlst_name": "ValidateDdSecurityData",                   "wlst_path": "WP001", "value": {"default": "false"                    }, "wlst_type": "boolean" }  ,
+                "SecurityDDModel":                          [ {"version": "[10,12.1.3)", "wlst_mode": "both", "wlst_name": "Security${Dd:DD}Model",                    "wlst_path": "WP001", "value": {"default": "${None:DDOnly}"           }, "wlst_type": "string"  }  ,
+                                                              {"version": "[12.1.3,)",   "wlst_mode": "both", "wlst_name": "SecurityDDModel",                          "wlst_path": "WP001", "value": {"default": "${None:DDOnly}"           }, "wlst_type": "string"  } ],
+                "ValidateDDSecurityData":                   [ {"version": "[10,12.1.3)", "wlst_mode": "both", "wlst_name": "Validate${Dd:DD}SecurityData",             "wlst_path": "WP001", "value": {"default": "false"                    }, "wlst_type": "boolean" }  ,
                                                               {"version": "[12.1.3,)",   "wlst_mode": "both", "wlst_name": "ValidateDDSecurityData",                   "wlst_path": "WP001", "value": {"default": "false"                    }, "wlst_type": "boolean" } ]
             },
             "wlst_attributes_path": "WP001",
